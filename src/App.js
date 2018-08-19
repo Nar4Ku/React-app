@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   handleIncrement = counter => {
+    //função adicionar do botão
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
@@ -27,6 +28,7 @@ class App extends Component {
   };
 
   handleReset = () => {
+    //função resetar(zerar contador) do botão
     const counters = this.state.counters.map(c => {
       c.value = 0;
       return c;
@@ -35,6 +37,7 @@ class App extends Component {
   };
 
   handleDelete = counterId => {
+    // função deletar do botão
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({ counters });
   };
